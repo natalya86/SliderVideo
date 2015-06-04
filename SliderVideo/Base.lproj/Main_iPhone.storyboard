@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="hfo-Cj-R7w">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Video Record View Controller-->
+        <scene sceneID="BgF-9I-t9t">
+            <objects>
+                <viewController id="hfo-Cj-R7w" customClass="VideoRecordViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kkt-rN-TrB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="gTQ-WA-du7">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.21960785984992981" green="0.10196079313755035" blue="0.23137256503105164" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="barTintColor" red="0.21960785984992981" green="0.10196079313755035" blue="0.23137256503105164" alpha="1" colorSpace="deviceRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem id="NcT-wM-5Ld">
+                                        <nil key="title"/>
+                                        <barButtonItem key="leftBarButtonItem" image="back.png" style="plain" id="h2d-Po-cJ3">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="clickback:" destination="hfo-Cj-R7w" id="tyi-Yf-FMh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YqY-Z1-XbQ">
+                                            <rect key="frame" x="115" y="0.0" width="91" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="cameraswich.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="clickswitchcamera:" destination="hfo-Cj-R7w" eventType="touchUpInside" id="JHh-At-3bO"/>
+                                            </connections>
+                                        </button>
+                                        <barButtonItem key="rightBarButtonItem" image="next.png" style="plain" id="Smo-xQ-jPf">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="clicknext:" destination="hfo-Cj-R7w" id="PnT-Hz-n3O"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P3h-3N-mP2">
+                                <rect key="frame" x="0.0" y="384" width="320" height="184"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.14901961386203766" green="0.14901961386203766" blue="0.14901961386203766" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jwG-r8-klT">
+                                <rect key="frame" x="39" y="461" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="uploadvideo.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZJL-li-ND5" kind="modal" id="PWY-gS-YCa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ex7-yl-gzI">
+                                <rect key="frame" x="240" y="461" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="selectpicture.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="88o-TU-QTI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hqi-ga-RVT"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="btnaddphoto" destination="Ex7-yl-gzI" id="qp1-q6-bTj"/>
+                        <outlet property="btnuploadvideo" destination="jwG-r8-klT" id="haj-h7-Szf"/>
+                        <outlet property="nextitem" destination="Smo-xQ-jPf" id="cQI-DM-dJb"/>
+                        <segue destination="alx-sr-qaM" kind="modal" identifier="videogofilter" id="BCP-kZ-dDm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fs-uB-DBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794" y="-125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="kg1-LU-KSq">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.21960785984992981" green="0.10196079313755035" blue="0.23137256503105164" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="barTintColor" red="0.16761602646809909" green="0.073237873842117968" blue="0.17936905570652173" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Select Picture" id="l3c-aO-yCM">
+                                        <barButtonItem key="leftBarButtonItem" image="back.png" style="plain" id="y1Z-5M-tp6">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="clickback:" destination="vXZ-lx-hvc" id="ro3-4t-XF0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="next.png" style="plain" id="j8a-pe-hG1">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="clicknext:" destination="vXZ-lx-hvc" id="cT4-mq-ans"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" id="Tac-BQ-DuH">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="CJk-ie-ddT">
+                                        <rect key="frame" x="0.0" y="434" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" id="Et7-nT-0MR">
+                                                <rect key="frame" x="91" y="20" width="139" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Include filter" image="checkoff.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected" image="checkon.png"/>
+                                                <connections>
+                                                    <action selector="clickincludefilter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gbh-aV-stU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.14901961386203766" green="0.14901961386203766" blue="0.14901961386203766" alpha="1" colorSpace="deviceRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21960785984992981" green="0.10196079313755035" blue="0.23137256503105164" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="checkfilter" destination="Et7-nT-0MR" id="WT9-ck-9GW"/>
+                        <outlet property="navbar" destination="kg1-LU-KSq" id="xsu-zH-NSG"/>
+                        <outlet property="viewfilter" destination="CJk-ie-ddT" id="s5b-bj-znQ"/>
+                        <segue destination="alx-sr-qaM" kind="modal" identifier="gofilter" id="OMk-aA-oa4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-347" y="530"/>
+        </scene>
+        <!--Video Select View Controller-->
+        <scene sceneID="xIV-T8-gdj">
+            <objects>
+                <viewController id="ZJL-li-ND5" customClass="VideoSelectViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9lC-17-vKZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="0Me-lg-dDf">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="muP-O3-zT3">
+                                <rect key="frame" x="6" y="130" width="308" height="309"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="selectvideo.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickselectvideo:" destination="ZJL-li-ND5" eventType="touchUpInside" id="IHh-hC-XNb"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="tRx-DI-Xni">
+                                <rect key="frame" x="0.0" y="498" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" id="wIP-qG-YUz">
+                                        <rect key="frame" x="91" y="20" width="139" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Include filter" image="checkoff.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="checkon.png"/>
+                                        <connections>
+                                            <action selector="clickincludefilter:" destination="ZJL-li-ND5" eventType="touchUpInside" id="43d-yO-WTT"/>
+                                            <action selector="clickincludefilter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eBN-Gx-7mG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="0qv-6N-59h">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2196078598" green="0.1019607931" blue="0.231372565" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="barTintColor" red="0.2196078598" green="0.1019607931" blue="0.231372565" alpha="1" colorSpace="deviceRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Add Audio" id="FT0-vd-kHH">
+                                        <barButtonItem key="leftBarButtonItem" image="back.png" style="plain" id="oaI-rh-0S3">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="clickback:" destination="ZJL-li-ND5" id="tiH-tT-HEp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="next.png" style="plain" id="ddb-D7-FoO">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="clicknext:" destination="ZJL-li-ND5" id="lQs-9y-dfr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkfilter" destination="wIP-qG-YUz" id="jcd-Pi-2od"/>
+                        <outlet property="m_itemback" destination="oaI-rh-0S3" id="N2R-tc-E1L"/>
+                        <outlet property="m_itemnext" destination="ddb-D7-FoO" id="yyI-Cr-R8M"/>
+                        <outlet property="selbtn" destination="muP-O3-zT3" id="vb2-Zq-Fb0"/>
+                        <segue destination="alx-sr-qaM" kind="modal" identifier="videogofilter" id="06Z-lD-dUt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="173-wI-oan" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="-550"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="sXD-oq-e4M">
+            <objects>
+                <viewController id="alx-sr-qaM" customClass="FilterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X0v-Ea-39Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="wFi-Hd-e3a">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.21960785984992981" green="0.10196079313755035" blue="0.23137256503105164" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="barTintColor" red="0.21960785984992981" green="0.10196079313755035" blue="0.23137256503105164" alpha="1" colorSpace="deviceRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Add Audio" id="v51-qL-E3T">
+                                        <barButtonItem key="leftBarButtonItem" image="back.png" style="plain" id="Hmb-lX-Zv1">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="clickback:" destination="alx-sr-qaM" id="39z-Sf-lmC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="next.png" style="plain" id="8rX-uN-G76">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="clickcomplete:" destination="alx-sr-qaM" id="ZQb-ha-y1J"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" id="mZb-4l-ywb">
+                                <rect key="frame" x="0.0" y="384" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k8M-3I-ZCN">
+                                        <rect key="frame" x="58" y="58" width="215" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Add record" backgroundImage="pinkbutton.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickRecordPause" destination="alx-sr-qaM" eventType="touchUpInside" id="vg6-ak-cfN"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" id="KLE-GV-yfP" customClass="ACPScrollMenu">
+                                        <rect key="frame" x="0.0" y="3" width="320" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14901961386203766" green="0.14901961386203766" blue="0.14901961386203766" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="WUf-Kr-dwc">
+                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OEu-E5-eKD">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="svI-Md-7Z9">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickreplay:" destination="alx-sr-qaM" eventType="touchUpInside" id="mJs-PD-5Fx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21960785984992981" green="0.10196079313755035" blue="0.23137256503105164" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bnQ-U3-Ctq"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="m_addrecord" destination="k8M-3I-ZCN" id="4VC-Vh-q97"/>
+                        <outlet property="m_itemback" destination="Hmb-lX-Zv1" id="5wc-BZ-F35"/>
+                        <outlet property="m_itemnext" destination="8rX-uN-G76" id="6ZY-54-ubx"/>
+                        <outlet property="m_previewVideo" destination="OEu-E5-eKD" id="x8E-uc-lUE"/>
+                        <outlet property="scrollMenu" destination="KLE-GV-yfP" id="00c-w3-bii"/>
+                        <outlet property="view" destination="X0v-Ea-39Z" id="Pyk-SZ-g5q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mv4-Ih-wOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="-125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back.png" width="25" height="17"/>
+        <image name="cameraswich.png" width="44" height="18"/>
+        <image name="checkoff.png" width="25" height="26"/>
+        <image name="checkon.png" width="24" height="24"/>
+        <image name="next.png" width="20" height="17"/>
+        <image name="pinkbutton.png" width="215" height="33"/>
+        <image name="selectpicture.png" width="42" height="30"/>
+        <image name="selectvideo.png" width="308" height="309"/>
+        <image name="uploadvideo.png" width="42" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="06Z-lD-dUt"/>
+    </inferredMetricsTieBreakers>
+</document>
